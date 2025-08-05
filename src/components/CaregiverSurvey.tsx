@@ -522,10 +522,10 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
       subtitle: "Select all that apply",
       content: (
         <div className="space-y-4">
-          <div className="mb-6">
+          <div className="mb-4">
             <img
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=128&fit=crop&crop=center"
-              alt="People collaboration illustration"
+              src="/lovable-uploads/b7ed724e-db9d-4199-a078-d931278ec3bd.png"
+              alt="Colorful meadow flowers illustration"
               className="w-full h-32 object-cover rounded-lg"
             />
           </div>
@@ -605,10 +605,10 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
       subtitle: "Help us understand what you need",
       content: (
         <div className="space-y-4">
-          <div className="mb-6">
+          <div className="mb-4">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=128&fit=crop&crop=center"
-              alt="Technology and collaboration illustration"
+              src="/lovable-uploads/b7ed724e-db9d-4199-a078-d931278ec3bd.png"
+              alt="Colorful meadow flowers illustration"
               className="w-full h-32 object-cover rounded-lg"
             />
           </div>
@@ -631,10 +631,10 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
       subtitle: "Your ideas matter to us",
       content: (
         <div className="space-y-4">
-          <div className="mb-6">
+          <div className="mb-4">
             <img
-              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=128&fit=crop&crop=center"
-              alt="Technology and AI illustration"
+              src="/lovable-uploads/b7ed724e-db9d-4199-a078-d931278ec3bd.png"
+              alt="Colorful meadow flowers illustration"
               className="w-full h-32 object-cover rounded-lg"
             />
           </div>

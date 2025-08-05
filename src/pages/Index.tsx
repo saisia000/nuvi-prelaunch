@@ -257,7 +257,7 @@ const Index = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="pt-24"
               >
-                <CaregiverSurvey onClose={() => handleViewChange("selection")} />
+                <CaregiverSurvey onClose={() => handleViewChange("home")} />
               </motion.div>
             )}
 

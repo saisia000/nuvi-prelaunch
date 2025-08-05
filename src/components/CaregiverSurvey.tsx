@@ -383,6 +383,136 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
               </SelectContent>
             </Select>
           </div>
+
+          {/* State field for US and India */}
+          {(surveyData.country === "United States" || surveyData.country === "India") && (
+            <div>
+              <Label htmlFor="state" className="text-sm font-medium">State *</Label>
+              <Select
+                value={surveyData.state}
+                onValueChange={(value) => updateSurveyData("state", value)}
+              >
+                <SelectTrigger className="mt-1">
+                  <SelectValue placeholder="Select your state" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border shadow-lg z-50 max-h-60">
+                  {surveyData.country === "United States" && [
+                    <SelectItem key="AL" value="Alabama">Alabama</SelectItem>,
+                    <SelectItem key="AK" value="Alaska">Alaska</SelectItem>,
+                    <SelectItem key="AZ" value="Arizona">Arizona</SelectItem>,
+                    <SelectItem key="AR" value="Arkansas">Arkansas</SelectItem>,
+                    <SelectItem key="CA" value="California">California</SelectItem>,
+                    <SelectItem key="CO" value="Colorado">Colorado</SelectItem>,
+                    <SelectItem key="CT" value="Connecticut">Connecticut</SelectItem>,
+                    <SelectItem key="DE" value="Delaware">Delaware</SelectItem>,
+                    <SelectItem key="FL" value="Florida">Florida</SelectItem>,
+                    <SelectItem key="GA" value="Georgia">Georgia</SelectItem>,
+                    <SelectItem key="HI" value="Hawaii">Hawaii</SelectItem>,
+                    <SelectItem key="ID" value="Idaho">Idaho</SelectItem>,
+                    <SelectItem key="IL" value="Illinois">Illinois</SelectItem>,
+                    <SelectItem key="IN" value="Indiana">Indiana</SelectItem>,
+                    <SelectItem key="IA" value="Iowa">Iowa</SelectItem>,
+                    <SelectItem key="KS" value="Kansas">Kansas</SelectItem>,
+                    <SelectItem key="KY" value="Kentucky">Kentucky</SelectItem>,
+                    <SelectItem key="LA" value="Louisiana">Louisiana</SelectItem>,
+                    <SelectItem key="ME" value="Maine">Maine</SelectItem>,
+                    <SelectItem key="MD" value="Maryland">Maryland</SelectItem>,
+                    <SelectItem key="MA" value="Massachusetts">Massachusetts</SelectItem>,
+                    <SelectItem key="MI" value="Michigan">Michigan</SelectItem>,
+                    <SelectItem key="MN" value="Minnesota">Minnesota</SelectItem>,
+                    <SelectItem key="MS" value="Mississippi">Mississippi</SelectItem>,
+                    <SelectItem key="MO" value="Missouri">Missouri</SelectItem>,
+                    <SelectItem key="MT" value="Montana">Montana</SelectItem>,
+                    <SelectItem key="NE" value="Nebraska">Nebraska</SelectItem>,
+                    <SelectItem key="NV" value="Nevada">Nevada</SelectItem>,
+                    <SelectItem key="NH" value="New Hampshire">New Hampshire</SelectItem>,
+                    <SelectItem key="NJ" value="New Jersey">New Jersey</SelectItem>,
+                    <SelectItem key="NM" value="New Mexico">New Mexico</SelectItem>,
+                    <SelectItem key="NY" value="New York">New York</SelectItem>,
+                    <SelectItem key="NC" value="North Carolina">North Carolina</SelectItem>,
+                    <SelectItem key="ND" value="North Dakota">North Dakota</SelectItem>,
+                    <SelectItem key="OH" value="Ohio">Ohio</SelectItem>,
+                    <SelectItem key="OK" value="Oklahoma">Oklahoma</SelectItem>,
+                    <SelectItem key="OR" value="Oregon">Oregon</SelectItem>,
+                    <SelectItem key="PA" value="Pennsylvania">Pennsylvania</SelectItem>,
+                    <SelectItem key="RI" value="Rhode Island">Rhode Island</SelectItem>,
+                    <SelectItem key="SC" value="South Carolina">South Carolina</SelectItem>,
+                    <SelectItem key="SD" value="South Dakota">South Dakota</SelectItem>,
+                    <SelectItem key="TN" value="Tennessee">Tennessee</SelectItem>,
+                    <SelectItem key="TX" value="Texas">Texas</SelectItem>,
+                    <SelectItem key="UT" value="Utah">Utah</SelectItem>,
+                    <SelectItem key="VT" value="Vermont">Vermont</SelectItem>,
+                    <SelectItem key="VA" value="Virginia">Virginia</SelectItem>,
+                    <SelectItem key="WA" value="Washington">Washington</SelectItem>,
+                    <SelectItem key="WV" value="West Virginia">West Virginia</SelectItem>,
+                    <SelectItem key="WI" value="Wisconsin">Wisconsin</SelectItem>,
+                    <SelectItem key="WY" value="Wyoming">Wyoming</SelectItem>,
+                    <SelectItem key="DC" value="District of Columbia">District of Columbia</SelectItem>
+                  ]}
+                  {surveyData.country === "India" && [
+                    <SelectItem key="AP" value="Andhra Pradesh">Andhra Pradesh</SelectItem>,
+                    <SelectItem key="AR" value="Arunachal Pradesh">Arunachal Pradesh</SelectItem>,
+                    <SelectItem key="AS" value="Assam">Assam</SelectItem>,
+                    <SelectItem key="BR" value="Bihar">Bihar</SelectItem>,
+                    <SelectItem key="CG" value="Chhattisgarh">Chhattisgarh</SelectItem>,
+                    <SelectItem key="GA" value="Goa">Goa</SelectItem>,
+                    <SelectItem key="GJ" value="Gujarat">Gujarat</SelectItem>,
+                    <SelectItem key="HR" value="Haryana">Haryana</SelectItem>,
+                    <SelectItem key="HP" value="Himachal Pradesh">Himachal Pradesh</SelectItem>,
+                    <SelectItem key="JH" value="Jharkhand">Jharkhand</SelectItem>,
+                    <SelectItem key="KA" value="Karnataka">Karnataka</SelectItem>,
+                    <SelectItem key="KL" value="Kerala">Kerala</SelectItem>,
+                    <SelectItem key="MP" value="Madhya Pradesh">Madhya Pradesh</SelectItem>,
+                    <SelectItem key="MH" value="Maharashtra">Maharashtra</SelectItem>,
+                    <SelectItem key="MN" value="Manipur">Manipur</SelectItem>,
+                    <SelectItem key="ML" value="Meghalaya">Meghalaya</SelectItem>,
+                    <SelectItem key="MZ" value="Mizoram">Mizoram</SelectItem>,
+                    <SelectItem key="NL" value="Nagaland">Nagaland</SelectItem>,
+                    <SelectItem key="OR" value="Odisha">Odisha</SelectItem>,
+                    <SelectItem key="PB" value="Punjab">Punjab</SelectItem>,
+                    <SelectItem key="RJ" value="Rajasthan">Rajasthan</SelectItem>,
+                    <SelectItem key="SK" value="Sikkim">Sikkim</SelectItem>,
+                    <SelectItem key="TN" value="Tamil Nadu">Tamil Nadu</SelectItem>,
+                    <SelectItem key="TS" value="Telangana">Telangana</SelectItem>,
+                    <SelectItem key="TR" value="Tripura">Tripura</SelectItem>,
+                    <SelectItem key="UP" value="Uttar Pradesh">Uttar Pradesh</SelectItem>,
+                    <SelectItem key="UK" value="Uttarakhand">Uttarakhand</SelectItem>,
+                    <SelectItem key="WB" value="West Bengal">West Bengal</SelectItem>,
+                    <SelectItem key="AN" value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</SelectItem>,
+                    <SelectItem key="CH" value="Chandigarh">Chandigarh</SelectItem>,
+                    <SelectItem key="DH" value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</SelectItem>,
+                    <SelectItem key="DL" value="Delhi">Delhi</SelectItem>,
+                    <SelectItem key="JK" value="Jammu and Kashmir">Jammu and Kashmir</SelectItem>,
+                    <SelectItem key="LA" value="Ladakh">Ladakh</SelectItem>,
+                    <SelectItem key="LD" value="Lakshadweep">Lakshadweep</SelectItem>,
+                    <SelectItem key="PY" value="Puducherry">Puducherry</SelectItem>
+                  ]}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+
+          {/* Zipcode field */}
+          <div>
+            <Label htmlFor="zipcode" className="text-sm font-medium">
+              {surveyData.country === "United States" ? "ZIP Code" :
+                surveyData.country === "Canada" ? "Postal Code" :
+                  surveyData.country === "United Kingdom" ? "Postcode" :
+                    "Postal Code"} (Optional)
+            </Label>
+            <Input
+              id="zipcode"
+              value={surveyData.zipcode}
+              onChange={(e) => updateSurveyData("zipcode", e.target.value)}
+              className="mt-1"
+              placeholder={
+                surveyData.country === "United States" ? "12345 or 12345-6789" :
+                  surveyData.country === "Canada" ? "K1A 0A6" :
+                    surveyData.country === "United Kingdom" ? "SW1A 1AA" :
+                      "Enter postal code"
+              }
+            />
+          </div>
         </div>
       )
     },

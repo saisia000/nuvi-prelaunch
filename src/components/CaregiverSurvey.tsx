@@ -524,9 +524,9 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
         <div className="space-y-4">
           <div className="mb-6">
             <img
-              src="/lovable-uploads/0f00d735-157a-4cc9-912c-19fca080d766.png"
-              alt="Cartoon handshake illustration"
-              className="w-full h-32 object-contain rounded-lg"
+              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=128&fit=crop&crop=center"
+              alt="People collaboration illustration"
+              className="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <Label className="text-sm font-medium">Select all that apply *</Label>
@@ -607,9 +607,9 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
         <div className="space-y-4">
           <div className="mb-6">
             <img
-              src="/lovable-uploads/1bcc7ad1-ffb5-4294-93aa-fbd09eaa368e.png"
-              alt="Colorful flowers field illustration"
-              className="w-full h-32 object-contain rounded-lg"
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=128&fit=crop&crop=center"
+              alt="Technology and collaboration illustration"
+              className="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <Label htmlFor="whatWouldSupport" className="text-sm font-medium">What would help you feel more supported? *</Label>
@@ -633,9 +633,9 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
         <div className="space-y-4">
           <div className="mb-6">
             <img
-              src="/lovable-uploads/3dee328c-6e75-4885-99ef-f5f820c93ffd.png"
-              alt="Happy cartoon face illustration"
-              className="w-full h-32 object-contain rounded-lg"
+              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=128&fit=crop&crop=center"
+              alt="Technology and AI illustration"
+              className="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <Label htmlFor="aiHelpfulSupport" className="text-sm font-medium">What AI support would feel helpful? *</Label>
@@ -837,7 +837,27 @@ const CaregiverSurvey = ({ onClose }: { onClose: () => void }) => {
         <p className="text-lg text-muted-foreground mb-6">
           Your responses help us build better support for caregivers like you.
         </p>
-        <Button onClick={onClose} className="px-8 py-3">
+
+        {/* Calendly scheduling link */}
+        <div className="mb-6">
+          <p className="text-md text-muted-foreground mb-4">
+            We'd love to learn more about your needs. Schedule a quick 20-minute call with our team:
+          </p>
+          <Button
+            asChild
+            className="px-8 py-3 mb-4 bg-primary hover:bg-primary/90"
+          >
+            <a
+              href="https://calendly.com/sia-sanjeevaniai/30min?month=2025-08"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule 20-min Call
+            </a>
+          </Button>
+        </div>
+
+        <Button onClick={onClose} variant="outline" className="px-8 py-3">
           Close Survey
         </Button>
       </motion.div>

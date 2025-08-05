@@ -139,11 +139,13 @@ const Index = () => {
                     <div className="w-16 h-0.5 bg-gradient-to-r from-[#D4A5A5] to-[#C89595] mx-auto"></div>
                   </div>
 
-                  <img
-                    src="/lovable-uploads/86c30b9d-a096-4605-9a2a-309d404907e6.png"
-                    alt="AI and human coordination illustration showing caregiving support"
-                    className="w-full max-w-3xl mx-auto object-contain"
-                    loading="lazy"
+                  <video
+                    src="/LandingPageVideo.mp4"
+                    className="w-full max-w-3xl mx-auto object-contain shadow-2xl rounded-lg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                 </motion.div>
 
